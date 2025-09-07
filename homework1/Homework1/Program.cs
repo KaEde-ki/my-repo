@@ -10,25 +10,38 @@ namespace Homework1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a sentence: ");
-            String str = Console.ReadLine().ToLower();
 
-            str = str.Replace(" ", "");
+            string str;
 
-            char[] wordArray = str.ToCharArray();
-            Array.Reverse(wordArray);
-            string reversed = new string(wordArray);
-
-            if(str == reversed)
+            while (true)
             {
-                Console.WriteLine("This is a palindrome.");
-            }
-            else
-            {
-                Console.WriteLine("This is not a palindrome.");
-            }
+                Console.Write("Enter sentence(* to cancel): ");
+                str = Console.ReadLine().ToLower();
 
-            Console.ReadKey();
-        }
+                if (str == "*")
+                    break;
+
+                string reversed = "";
+
+                for(int i = str.Length - 1; i >= 0; i--)
+                {
+                    reversed += str[i];
+                }
+
+                Console.WriteLine($"Original: {str}");
+                Console.WriteLine($"Reversed: {reversed}");
+
+                if(str == reversed)
+                {
+                    Console.WriteLine("This is Palindrome.");
+                }
+                else
+                {
+                    Console.WriteLine("This is not a Palindrome.");
+                }
+
+            }
+         }
+      }
     }
-}
+
