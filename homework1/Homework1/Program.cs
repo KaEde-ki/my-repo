@@ -33,11 +33,11 @@ namespace Homework1
 
                 if(str == reversed)
                 {
-                    Console.WriteLine("This is Palindrome.");
+                    Console.WriteLine("Palindrome: Yes");
                 }
                 else
                 {
-                    Console.WriteLine("This is not a Palindrome.");
+                    Console.WriteLine("Palindrome: No");
                 }
 
             }
